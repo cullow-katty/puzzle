@@ -2,15 +2,15 @@
  $servername="localhost";
 $username="root";
 $password="";
-$dbname="bunny";
+$dbname="puzzle";
 
 $conn=mysqli_connect($servername,$username,$password,$dbname);
 if(isset($_POST['submit'])){
 
-$fname=mysql_real_escape_string($_POST['fname']);
-$lname=mysql_real_escape_string($_POST['lname']);
-$gender=mysql_real_escape_string($_POST['gender']);
-$txtarea=mysql_real_escape_string($_POST['txtarea']);
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
+$gender=$_POST['gender'];
+$txtarea=$_POST['txtarea'];
 
     	
     			$sql= "INSERT INTO forms(fname,lname,gender,txtarea) VALUES('$fname','$lname','$gender','$txtarea');";
@@ -64,13 +64,13 @@ $txtarea=mysql_real_escape_string($_POST['txtarea']);
     padding: 10px;
     font-size: 20px;
     color: white;
-    background:lightgreen;
+    background:grey;
     border:none;
     margin: 2px;
 
 }
 .btn:hover{
-    background:green;
+    background:lightgreen;
 }
 .h{
   text-align: center;
